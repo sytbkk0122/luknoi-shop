@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สินค้าทั้งหมด — ชุดเด็กทารก เสื้อผ้าเด็กอ่อน | ลูกน้อย Shop</title>
+  <meta name="description" content="เลือกชุดเด็กทารกหลากหลายแบบ กรองตามอายุ เพศ หมวดหมู่ และราคา ผ้าฝ้ายออร์แกนิค 100% จัดส่งทั่วไทย Kerry / Flash Express" />
+  <meta name="keywords" content="ชุดเด็กทารก,เสื้อผ้าเด็กอ่อน,บอดี้สูทเด็ก,ชุดนอนเด็ก,ชุดของขวัญทารก,เสื้อผ้าเด็กผู้หญิง,เสื้อผ้าเด็กผู้ชาย" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://luknoi-shop.vercel.app/products" />
+  <meta property="og:title" content="สินค้าทั้งหมด — ลูกน้อย Shop" />
+  <meta property="og:description" content="ชุดเด็กทารกผ้าฝ้ายออร์แกนิค หลากหลายสไตล์ เหมาะทุกอายุ" />
+  <meta property="og:url" content="https://luknoi-shop.vercel.app/products" />
+  <meta property="og:image" content="https://luknoi-shop.vercel.app/images/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👶</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "หน้าหลัก", "item": "https://luknoi-shop.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "สินค้าทั้งหมด", "item": "https://luknoi-shop.vercel.app/products" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="เมนูหลัก">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo" aria-label="ลูกน้อย Shop - หน้าหลัก">
+      <div class="logo-icon">👶</div>
+      <div class="logo-text">
+        <span class="logo-th">ลูกน้อย Shop</span>
+        <span class="logo-en">Baby Clothes Thailand</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="menubar">
+      <li><a href="index.html">หน้าหลัก</a></li>
+      <li><a href="products.html" class="active">สินค้าทั้งหมด</a></li>
+      <li><a href="about.html">เกี่ยวกับเรา</a></li>
+      <li><a href="contact.html">ติดต่อ</a></li>
+    </ul>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button class="nav-cart" aria-label="ตะกร้าสินค้า">
+        🛒 ตะกร้า <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <div class="logo"><div class="logo-icon">👶</div><div class="logo-text"><span class="logo-th">ลูกน้อย Shop</span></div></div>
+    <button class="mobile-menu-close" id="menuCloseBtn">✕</button>
+  </div>
+  <ul>
+    <li><a href="index.html">🏠 หน้าหลัก</a></li>
+    <li><a href="products.html">👕 สินค้าทั้งหมด</a></li>
+    <li><a href="about.html">💛 เกี่ยวกับเรา</a></li>
+    <li><a href="contact.html">📞 ติดต่อเรา</a></li>
+  </ul>
+</div>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <h1>สินค้าทั้งหมด</h1>
+  <p>ชุดเด็กทารกคุณภาพดี ผ้าฝ้ายออร์แกนิค 100%</p>
+  <nav class="breadcrumb" aria-label="breadcrumb">
+    <a href="index.html">หน้าหลัก</a>
+    <span>›</span>
+    <span aria-current="page">สินค้าทั้งหมด</span>
+  </nav>
+</header>
+
+<!-- PRODUCTS LAYOUT -->
+<main>
+  <div class="products-layout">
+
+    <!-- FILTERS SIDEBAR -->
+    <aside class="filters-sidebar" aria-label="ตัวกรองสินค้า">
+      <div class="filter-group">
+        <div class="filter-title">ช่วงอายุ</div>
+        <div class="filter-options" role="group" aria-label="กรองตามช่วงอายุ">
+          <label class="filter-option"><input type="checkbox" value="0-3m" onchange="applyFilters()" /> 🍼 แรกเกิด 0–3 เดือน</label>
+          <label class="filter-option"><input type="checkbox" value="3-6m" onchange="applyFilters()" /> 🌙 3–6 เดือน</label>
+          <label class="filter-option"><input type="checkbox" value="6-12m" onchange="applyFilters()" /> 🐣 6–12 เดือน</label>
+          <label class="filter-option"><input type="checkbox" value="1-2y" onchange="applyFilters()" /> 🚶 1–2 ปี</label>
+          <label class="filter-option"><input type="checkbox" value="2-3y" onchange="applyFilters()" /> 🏃 2–3 ปี</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">หมวดหมู่</div>
+        <div class="filter-options" role="group" aria-label="กรองตามหมวดหมู่">
+          <label class="filter-option"><input type="checkbox" value="romper" onchange="applyFilters()" /> 👶 บอดี้สูท / โรมเปอร์</label>
+          <label class="filter-option"><input type="checkbox" value="top" onchange="applyFilters()" /> 👕 เสื้อ</label>
+          <label class="filter-option"><input type="checkbox" value="bottom" onchange="applyFilters()" /> 👖 กางเกง</label>
+          <label class="filter-option"><input type="checkbox" value="sleep" onchange="applyFilters()" /> 🌙 ชุดนอน</label>
+          <label class="filter-option"><input type="checkbox" value="gift" onchange="applyFilters()" /> 🎁 ชุดของขวัญ</label>
+          <label class="filter-option"><input type="checkbox" value="acc" onchange="applyFilters()" /> 🧢 หมวก/ถุงเท้า</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">เพศ</div>
+        <div class="filter-options" role="group" aria-label="กรองตามเพศ">
+          <label class="filter-option"><input type="checkbox" value="girl" onchange="applyFilters()" /> 🎀 เด็กผู้หญิง</label>
+          <label class="filter-option"><input type="checkbox" value="boy" onchange="applyFilters()" /> 💙 เด็กผู้ชาย</label>
+          <label class="filter-option"><input type="checkbox" value="unisex" onchange="applyFilters()" /> 💛 ยูนิเซ็กส์</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">ช่วงราคา</div>
+        <div class="filter-options" role="group" aria-label="กรองตามราคา">
+          <label class="filter-option"><input type="checkbox" value="under200" onchange="applyFilters()" /> ต่ำกว่า ฿200</label>
+          <label class="filter-option"><input type="checkbox" value="200-500" onchange="applyFilters()" /> ฿200 – ฿500</label>
+          <label class="filter-option"><input type="checkbox" value="500-1000" onchange="applyFilters()" /> ฿500 – ฿1,000</label>
+          <label class="filter-option"><input type="checkbox" value="over1000" onchange="applyFilters()" /> มากกว่า ฿1,000</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">สี</div>
+        <div class="filter-options">
+          <label class="filter-option"><input type="checkbox" value="pink" onchange="applyFilters()" /><span class="color-swatch" style="background:#F9A8C9;"></span> ชมพู</label>
+          <label class="filter-option"><input type="checkbox" value="blue" onchange="applyFilters()" /><span class="color-swatch" style="background:#93C5FD;"></span> ฟ้า</label>
+          <label class="filter-option"><input type="checkbox" value="white" onchange="applyFilters()" /><span class="color-swatch" style="background:#F3F4F6;"></span> ขาว</label>
+          <label class="filter-option"><input type="checkbox" value="yellow" onchange="applyFilters()" /><span class="color-swatch" style="background:#FCD34D;"></span> เหลือง</label>
+          <label class="filter-option"><input type="checkbox" value="green" onchange="applyFilters()" /><span class="color-swatch" style="background:#6EE7B7;"></span> เขียว</label>
+        </div>
+      </div>
+
+      <button onclick="clearFilters()" style="width:100%;padding:10px;background:var(--pink-light);color:var(--pink-dark);border-radius:8px;font-size:14px;font-weight:600;border:none;cursor:pointer;margin-top:8px;">
+        ล้างตัวกรอง ✕
+      </button>
+    </aside>
+
+    <!-- PRODUCTS MAIN -->
+    <section class="products-main" aria-label="รายการสินค้า">
+      <div class="toolbar">
+        <p class="result-count" id="resultCount">กำลังโหลด...</p>
+        <select class="sort-select" onchange="sortProducts(this.value)" aria-label="เรียงลำดับ">
+          <option value="popular">ยอดนิยม</option>
+          <option value="newest">ใหม่ล่าสุด</option>
+          <option value="price-asc">ราคาต่ำ → สูง</option>
+          <option value="price-desc">ราคาสูง → ต่ำ</option>
+          <option value="rating">คะแนนสูงสุด</option>
+        </select>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon">👶</div>
+        <div class="logo-text">
+          <span class="logo-th">ลูกน้อย Shop</span>
+          <span class="logo-en">Baby Clothes Thailand</span>
+        </div>
+      </div>
+      <p class="footer-desc">ชุดเด็กทารกผ้าฝ้ายออร์แกนิค 100% นุ่มนวล ปลอดภัย จัดส่งทั่วไทย</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn social-line">💬</a>
+        <a href="#" class="social-btn social-fb">📘</a>
+        <a href="#" class="social-btn social-ig">📷</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>สินค้า</h4>
+      <ul>
+        <li><a href="products.html?cat=romper">บอดี้สูท / โรมเปอร์</a></li>
+        <li><a href="products.html?cat=top">เสื้อ</a></li>
+        <li><a href="products.html?cat=bottom">กางเกง</a></li>
+        <li><a href="products.html?cat=sleep">ชุดนอน</a></li>
+        <li><a href="products.html?cat=gift">ชุดของขวัญ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ช่วยเหลือ</h4>
+      <ul>
+        <li><a href="#">วิธีวัดไซส์</a></li>
+        <li><a href="#">วิธีสั่งซื้อ</a></li>
+        <li><a href="#">การจัดส่ง</a></li>
+        <li><a href="#">คำถามที่พบบ่อย</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>เกี่ยวกับเรา</h4>
+      <ul>
+        <li><a href="about.html">เรื่องราวของเรา</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+        <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 ลูกน้อย Shop. สงวนลิขสิทธิ์ทุกประการ</p>
+    <div class="footer-payment">
+      <span>ชำระผ่าน:</span>
+      <div class="payment-icons">
+        <span class="payment-icon">PromptPay</span>
+        <span class="payment-icon">Visa</span>
+        <span class="payment-icon">MC</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Bottom Nav -->
+<nav class="mobile-nav" aria-label="เมนูด้านล่าง">
+  <div class="mobile-nav-grid">
+    <a href="index.html" class="mobile-nav-item"><span>🏠</span><span>หน้าหลัก</span></a>
+    <a href="products.html" class="mobile-nav-item active"><span>🛍️</span><span>สินค้า</span></a>
+    <a href="#" class="mobile-nav-item"><span>🛒</span><span>ตะกร้า</span></a>
+    <a href="contact.html" class="mobile-nav-item"><span>💬</span><span>ติดต่อ</span></a>
+  </div>
+</nav>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Init products page with all products
+  document.addEventListener('DOMContentLoaded', () => {
+    renderProductsPage(PRODUCTS);
+    document.getElementById('resultCount').textContent = `พบสินค้า ${PRODUCTS.length} รายการ`;
+  });
+
+  function applyFilters() {
+    const checkedVals = (name) =>
+      [...document.querySelectorAll(`input[type=checkbox][value="${name}"]`)].filter(el => el.checked).map(el => el.value);
+
+    const ageChecks   = [...document.querySelectorAll('.filter-options input[value$="m"], .filter-options input[value$="y"]')].filter(el => el.checked).map(el => el.value);
+    const catChecks   = [...document.querySelectorAll('.filter-options input[value="romper"], .filter-options input[value="top"], .filter-options input[value="bottom"], .filter-options input[value="sleep"], .filter-options input[value="gift"], .filter-options input[value="acc"]')].filter(el => el.checked).map(el => el.value);
+
+    let filtered = PRODUCTS;
+    if (ageChecks.length > 0) filtered = filtered.filter(p => ageChecks.includes(p.age));
+    if (catChecks.length > 0) filtered = filtered.filter(p => catChecks.includes(p.cat));
+
+    renderProductsPage(filtered);
+    document.getElementById('resultCount').textContent = `พบสินค้า ${filtered.length} รายการ`;
+  }
+
+  function sortProducts(val) {
+    let sorted = [...PRODUCTS];
+    if (val === 'newest')    sorted.sort((a,b) => b.id - a.id);
+    if (val === 'price-asc') sorted.sort((a,b) => a.price - b.price);
+    if (val === 'price-desc') sorted.sort((a,b) => b.price - a.price);
+    if (val === 'rating')    sorted.sort((a,b) => b.rating - a.rating);
+    renderProductsPage(sorted);
+  }
+
+  function clearFilters() {
+    document.querySelectorAll('.filter-options input[type=checkbox]').forEach(el => el.checked = false);
+    renderProductsPage(PRODUCTS);
+    document.getElementById('resultCount').textContent = `พบสินค้า ${PRODUCTS.length} รายการ`;
+  }
+
+  function renderProductsPage(list) {
+    const grid = document.getElementById('productsGrid');
+    grid.innerHTML = list.length ? list.map(p => productCardHTML(p)).join('') : '<p style="color:var(--text-muted);padding:40px;text-align:center;grid-column:1/-1;">ไม่พบสินค้าที่ตรงกับเงื่อนไข</p>';
+  }
+</script>
+</body>
+</html>

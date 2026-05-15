@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block unnecessary paths
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: https://luknoi-shop.vercel.app/sitemap.xml
