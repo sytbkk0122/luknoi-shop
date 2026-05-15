@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Lamooné Kids — เสื้อผ้าเด็กออร์แกนิค คัดสรรด้วยความรัก สำหรับลูกน้อย">
+  <title>Lamooné Kids — Baby & Family Goods</title>
+  <meta name="theme-color" content="#F7F3EE">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta property="og:title" content="Lamooné Kids — Baby & Family Goods">
+  <meta property="og:description" content="เสื้อผ้าเด็กพรีเมียม ออร์แกนิค คัดสรรด้วยความรัก สไตล์เกาหลี-สแกนดิเนเวีย สำหรับลูกน้อย">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:site_name" content="Lamooné Kids">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-page-mode" content="app">
+  <meta name="browsermode" content="application">
+  <meta name="nightmode" content="disable">
+  <meta name="layoutmode" content="fitscreen">
+  <meta name="imagemode" content="force">
+  <meta name="screen-orientation" content="portrait">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+  /* =============================================
+     LAMOONÉ KIDS — V2: SOFT BOUTIQUE
+     Inspiration: Bangkok Ari café · warm mother's touch
+  ============================================= */
+  :root {
+    --cream:    #F7F3EE;
+    --cream-warm:#F2EDE6;
+    --blush:    #EDE4D8;
+    --taupe:    #D6C8B8;
+    --taupe-dk: #C4B4A0;
+    --mocha:    #5E5148;
+    --mocha-md: #7A6A5E;
+    --mocha-lt: #A89B8E;
+    --sage:     #C8D0C4;
+    --sage-lt:  #E8EEE6;
+    --sage-md:  #B0BCA8;
+    --white:    #FFFFFF;
+    --border:   #E0D6CC;
+    --border-lt:#EBE4DC;
+    --fn-en: 'Cormorant Garamond', Georgia, serif;
+    --fn-ui: 'Jost', sans-serif;
+    --fn-th: 'Anuphan', sans-serif;
+    --ease: all 0.35s ease;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--fn-th);
+    background: var(--cream);
+    color: var(--mocha);
+    line-height: 1.85;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: env(safe-area-inset-bottom);
+    font-weight: 300;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { text-decoration: none; color: inherit; transition: var(--ease); -webkit-tap-highlight-color: transparent; }
+  ul { list-style: none; }
+  button { cursor: pointer; font-family: inherit; border: none; outline: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---- VERSION SWITCH ---- */
+  .version-bar {
+    background: var(--sage-lt); border-bottom: 1px solid var(--border-lt);
+    padding: 10px 24px; display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .version-bar span { font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mocha-lt); }
+  .v-btn {
+    padding: 6px 22px; font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.18em;
+    text-transform: uppercase; border: 1px solid var(--border); background: transparent;
+    color: var(--mocha); border-radius: 999px; transition: var(--ease);
+  }
+  .v-btn.active { background: var(--mocha); color: var(--cream); border-color: var(--mocha); }
+  .v-btn:hover:not(.active) { border-color: var(--mocha); }
+
+  /* ---- TOPBAR ---- */
+  .topbar {
+    background: var(--sage-lt); border-bottom: 1px solid var(--border-lt);
+    padding: 8px 24px; text-align: center; font-family: var(--fn-th);
+    font-size: 13px; color: var(--mocha-md); font-weight: 400;
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+  }
+  .topbar-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--sage-md); flex-shrink: 0; }
+
+  /* ---- NAVBAR ---- */
+  .nav {
+    background: rgba(247,243,238,0.97);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-lt);
+    position: -webkit-sticky; position: sticky;
+    top: 0; z-index: 100;
+    box-shadow: 0 2px 24px rgba(94,81,72,0.04);
+  }
+  .nav-inner {
+    max-width: 1180px; margin: 0 auto; padding: 0 28px;
+    height: 72px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-illustration { flex-shrink: 0; }
+  .logo-text { line-height: 1.3; }
+  .logo-en {
+    font-family: var(--fn-en); font-size: 22px; font-weight: 400;
+    letter-spacing: 0.12em; color: var(--mocha); display: block;
+  }
+  .logo-sub {
+    font-family: var(--fn-ui); font-size: 8px; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--mocha-lt); display: block; margin-top: 1px;
+  }
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a {
+    padding: 7px 16px; font-family: var(--fn-th); font-size: 14px;
+    font-weight: 400; color: var(--mocha-lt); border-radius: 999px;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--mocha); background: var(--blush); }
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .nav-cart {
+    display: flex; align-items: center; gap: 8px; padding: 9px 22px;
+    background: var(--mocha); color: var(--cream); font-family: var(--fn-th);
+    font-size: 14px; font-weight: 400; border-radius: 999px; transition: var(--ease);
+  }
+  .nav-cart:hover { background: var(--mocha-md); }
+  .cart-count {
+    background: var(--taupe); color: var(--mocha); width: 18px; height: 18px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500;
+  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; padding: 8px; }
+  .hamburger span { width: 22px; height: 1.5px; background: var(--mocha); border-radius: 2px; transition: var(--ease); }
+
+  /* ---- HERO ---- */
+  .hero {
+    background: linear-gradient(170deg, var(--cream) 0%, var(--cream-warm) 50%, var(--sage-lt) 100%);
+    padding: 100px 28px 90px; text-align: center; position: relative; overflow: hidden;
+  }
+  /* Soft decorative arch */
+  .hero-arch {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 500px; height: 400px; border: 1px solid var(--border-lt);
+    border-radius: 0 0 250px 250px; pointer-events: none; opacity: 0.6;
+  }
+  .hero-content { position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white); border: 1px solid var(--border-lt);
+    border-radius: 999px; padding: 7px 20px; font-family: var(--fn-th);
+    font-size: 12px; font-weight: 400; color: var(--mocha-lt); margin-bottom: 36px;
+    box-shadow: 0 2px 16px rgba(94,81,72,0.05);
+  }
+  .hero h1 {
+    font-family: var(--fn-en); font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 300; font-style: italic; line-height: 1.15; color: var(--mocha);
+    margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto;
+  }
+  .hero h1 strong { font-style: normal; font-weight: 400; }
+  .hero-th {
+    font-family: var(--fn-th); font-size: 15px; font-weight: 300; color: var(--mocha-md);
+    line-height: 2.1; max-width: 440px; margin: 0 auto 48px;
+  }
+  .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--mocha); color: var(--cream); padding: 15px 40px;
+    font-family: var(--fn-th); font-size: 15px; font-weight: 400;
+    border-radius: 999px; display: inline-flex; align-items: center; gap: 10px;
+    transition: var(--ease); box-shadow: 0 4px 24px rgba(94,81,72,0.2);
+  }
+  .btn-primary:hover { background: var(--mocha-md); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--mocha); padding: 15px 40px;
+    font-family: var(--fn-th); font-size: 15px; font-weight: 400;
+    border-radius: 999px; border: 1.5px solid var(--border);
+    display: inline-flex; align-items: center; gap: 10px; transition: var(--ease);
+  }
+  .btn-outline:hover { border-color: var(--mocha); }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 52px; margin-top: 72px;
+    padding-top: 44px; border-top: 1px solid var(--border-lt); flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: var(--fn-en); font-size: 28px; font-weight: 400; font-style: italic; display: block; color: var(--mocha); }
+  .stat-lbl { font-family: var(--fn-th); font-size: 12px; color: var(--mocha-lt); font-weight: 400; margin-top: 4px; display: block; }
+
+  /* ---- SECTION HEAD ---- */
+  .sec-head { text-align: center; margin-bottom: 52px; }
+  .sec-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--fn-th); font-size: 12px; color: var(--sage-md);
+    margin-bottom: 10px; font-weight: 400;
+  }
+  .sec-eyebrow::before, .sec-eyebrow::after {
+    content: ''; width: 28px; height: 1px; background: var(--taupe); display: block;
+  }
+  .sec-head h2 {
+    font-family: var(--fn-en); font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400; font-style: italic; color: var(--mocha); letter-spacing: 0.02em;
+  }
+  .sec-head p { font-family: var(--fn-th); font-size: 13px; color: var(--mocha-lt); margin-top: 10px; line-height: 2; font-weight: 300; }
+
+  /* ---- AGE FILTER ---- */
+  .age-filter { padding: 72px 28px; background: var(--white); }
+  .age-grid { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .age-card {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    padding: 22px 28px; background: var(--cream); border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius); cursor: pointer; transition: var(--ease); min-width: 110px;
+  }
+  .age-card:hover, .age-card.active { background: var(--sage-lt); border-color: var(--sage-md); }
+  .age-emoji { font-size: 28px; }
+  .age-label { font-family: var(--fn-th); font-size: 13px; font-weight: 400; color: var(--mocha); }
+  .age-sub { font-family: var(--fn-th); font-size: 11px; color: var(--mocha-lt); }
+
+  /* ---- CATEGORIES ---- */
+  .categories { padding: 80px 28px; background: var(--cream-warm); }
+  .cat-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  }
+  .cat-card {
+    background: var(--white); border-radius: var(--radius); overflow: hidden;
+    cursor: pointer; transition: var(--ease); border: 1px solid var(--border-lt);
+    box-shadow: 0 2px 20px rgba(94,81,72,0.04);
+  }
+  .cat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 40px rgba(94,81,72,0.1); }
+  .cat-bg {
+    aspect-ratio: 4/3; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px; font-size: 36px;
+  }
+  .cat-c1 { background: linear-gradient(135deg, #F5EDE0, #EDD8C4); }
+  .cat-c2 { background: linear-gradient(135deg, #E8EEE6, #C8D5C4); }
+  .cat-c3 { background: linear-gradient(135deg, #F5EDD8, #E8D8B0); }
+  .cat-c4 { background: linear-gradient(135deg, #EDE8F0, #D8CCEC); }
+  .cat-c5 { background: linear-gradient(135deg, #EDF0E8, #CAD4C4); }
+  .cat-c6 { background: linear-gradient(135deg, #F5E8E0, #EAC8B4); }
+  .cat-info { padding: 16px 18px; }
+  .cat-name { font-family: var(--fn-th); font-size: 15px; font-weight: 400; color: var(--mocha); }
+  .cat-count { font-family: var(--fn-th); font-size: 12px; color: var(--mocha-lt); margin-top: 3px; }
+
+  /* ---- PRODUCTS ---- */
+  .products { padding: 80px 28px; background: var(--cream); }
+  .prod-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 32px; }
+  .prod-header h2 { font-family: var(--fn-en); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 400; font-style: italic; color: var(--mocha); }
+  .prod-header p { font-family: var(--fn-th); font-size: 13px; color: var(--mocha-lt); margin-top: 4px; }
+  .view-all { font-family: var(--fn-th); font-size: 13px; color: var(--mocha-lt); display: flex; align-items: center; gap: 6px; }
+  .view-all:hover { color: var(--mocha); }
+  .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .product-card {
+    background: var(--white); border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--border-lt); transition: var(--ease);
+    box-shadow: 0 2px 16px rgba(94,81,72,0.04);
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: 0 10px 44px rgba(94,81,72,0.1); border-color: var(--taupe); }
+  .prod-img { aspect-ratio: 1; position: relative; overflow: hidden; }
+  .prod-img-bg {
+    width: 100%; height: 100%; display: flex; align-items: center;
+    justify-content: center; font-size: 44px; transition: transform 0.4s ease;
+  }
+  .product-card:hover .prod-img-bg { transform: scale(1.06); }
+  .prod-tag {
+    position: absolute; top: 12px; left: 12px; font-family: var(--fn-ui); font-size: 8px;
+    font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px; background: var(--mocha); color: var(--cream);
+  }
+  .prod-tag.t-new { background: var(--sage-md); color: var(--white); }
+  .prod-tag.t-sale { background: var(--taupe-dk); color: var(--white); }
+  .prod-tag.t-org { background: transparent; border: 1px solid var(--sage-md); color: var(--sage-md); }
+  .prod-wish {
+    position: absolute; top: 12px; right: 12px; width: 32px; height: 32px;
+    background: rgba(255,255,255,0.88); border-radius: 50%; display: flex;
+    align-items: center; justify-content: center; font-size: 14px;
+    border: 1px solid var(--border-lt); cursor: pointer; transition: var(--ease);
+  }
+  .prod-wish:hover { transform: scale(1.1); }
+  .prod-info { padding: 18px; }
+  .prod-name { font-family: var(--fn-en); font-size: 16px; font-weight: 400; color: var(--mocha); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .prod-name-th { font-family: var(--fn-th); font-size: 13px; color: var(--mocha-lt); margin: 3px 0 12px; font-weight: 300; }
+  .prod-rating { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--taupe-dk); margin-bottom: 12px; }
+  .prod-rating span { font-family: var(--fn-th); font-size: 11px; color: var(--mocha-lt); }
+  .prod-bottom { display: flex; align-items: center; justify-content: space-between; }
+  .prod-price { font-family: var(--fn-en); font-size: 20px; font-weight: 400; color: var(--mocha); }
+  .prod-old { font-family: var(--fn-th); font-size: 11px; color: var(--mocha-lt); text-decoration: line-through; display: block; line-height: 1; margin-bottom: 2px; }
+  .prod-add {
+    background: var(--mocha); color: var(--cream); border: none; border-radius: 999px;
+    padding: 8px 16px; font-family: var(--fn-th); font-size: 13px; font-weight: 400; transition: var(--ease);
+  }
+  .prod-add:hover { background: var(--mocha-md); transform: scale(1.04); }
+
+  /* ---- STORY BAND ---- */
+  .story-band { background: var(--blush); padding: 80px 28px; }
+  .story-inner { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .story-img-mock {
+    aspect-ratio: 4/5; border-radius: var(--radius);
+    background: linear-gradient(150deg, var(--cream-warm), var(--taupe));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 72px; color: var(--mocha-lt);
+  }
+  .story-text { }
+  .story-text h2 { font-family: var(--fn-en); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; font-style: italic; color: var(--mocha); margin-bottom: 20px; line-height: 1.3; }
+  .story-text p { font-family: var(--fn-th); font-size: 14px; color: var(--mocha-md); line-height: 2.2; font-weight: 300; margin-bottom: 14px; }
+  .story-text a { font-family: var(--fn-th); font-size: 13px; color: var(--mocha); display: inline-flex; align-items: center; gap: 6px; border-bottom: 1px solid var(--taupe); padding-bottom: 2px; }
+  .story-text a:hover { border-color: var(--mocha); }
+
+  /* ---- TRUST ---- */
+  .trust { padding: 72px 28px; background: var(--sage-lt); }
+  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
+  .trust-item {
+    background: var(--white); border-radius: var(--radius-sm); padding: 32px 18px; text-align: center;
+    border: 1px solid var(--border-lt); transition: var(--ease);
+  }
+  .trust-item:hover { box-shadow: 0 6px 32px rgba(94,81,72,0.08); transform: translateY(-2px); }
+  .trust-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+  .trust-item h3 { font-family: var(--fn-th); font-size: 14px; font-weight: 500; color: var(--mocha); margin-bottom: 8px; }
+  .trust-item p { font-family: var(--fn-th); font-size: 12px; color: var(--mocha-lt); line-height: 1.9; font-weight: 300; }
+
+  /* ---- REVIEWS ---- */
+  .reviews { padding: 80px 28px; background: var(--cream-warm); }
+  .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .review-card { background: var(--white); border-radius: var(--radius); padding: 28px; border: 1px solid var(--border-lt); }
+  .review-stars { color: var(--taupe-dk); font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+  .review-text { font-family: var(--fn-en); font-size: 15px; font-style: italic; font-weight: 300; color: var(--mocha); line-height: 1.9; margin-bottom: 20px; }
+  .review-author { display: flex; align-items: center; gap: 10px; }
+  .review-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--sage-lt); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .review-name { font-family: var(--fn-th); font-size: 13px; font-weight: 500; color: var(--mocha); }
+  .review-date { font-family: var(--fn-th); font-size: 11px; color: var(--mocha-lt); }
+
+  /* ---- NEWSLETTER ---- */
+  .newsletter {
+    background: linear-gradient(135deg, var(--blush) 0%, var(--sage-lt) 100%);
+    padding: 90px 28px; text-align: center;
+    border-top: 1px solid var(--border-lt); border-bottom: 1px solid var(--border-lt);
+    position: relative; overflow: hidden;
+  }
+  .nl-deco {
+    position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+    width: 400px; height: 400px; border-radius: 50%;
+    border: 1px solid var(--border); opacity: 0.5; pointer-events: none;
+  }
+  .nl-deco-2 {
+    position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
+    width: 250px; height: 250px; border-radius: 50%;
+    border: 1px solid var(--taupe); opacity: 0.3; pointer-events: none;
+  }
+  .newsletter-content { position: relative; z-index: 1; }
+  .nl-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white); border: 1px solid var(--border-lt); border-radius: 999px;
+    padding: 6px 18px; font-family: var(--fn-th); font-size: 12px; color: var(--mocha-lt);
+    margin-bottom: 24px; box-shadow: 0 2px 12px rgba(94,81,72,0.06);
+  }
+  .newsletter h2 { font-family: var(--fn-en); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; font-style: italic; color: var(--mocha); margin-bottom: 14px; }
+  .newsletter p { font-family: var(--fn-th); font-size: 14px; color: var(--mocha-md); margin-bottom: 40px; line-height: 2.2; font-weight: 300; }
+  .nl-form { display: flex; max-width: 460px; margin: 0 auto; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .nl-form input {
+    flex: 1; min-width: 220px; padding: 14px 22px; background: var(--white);
+    border: 1.5px solid var(--border); border-radius: 999px; font-family: var(--fn-th);
+    font-size: 14px; color: var(--mocha); outline: none; transition: var(--ease);
+  }
+  .nl-form input:focus { border-color: var(--taupe-dk); box-shadow: 0 0 0 3px rgba(214,200,184,0.2); }
+  .nl-form input::placeholder { color: var(--mocha-lt); }
+  .nl-form button {
+    background: var(--mocha); color: var(--cream); padding: 14px 28px;
+    border-radius: 999px; font-family: var(--fn-th); font-size: 14px; font-weight: 400;
+    transition: var(--ease); white-space: nowrap; box-shadow: 0 4px 20px rgba(94,81,72,0.2);
+  }
+  .nl-form button:hover { background: var(--mocha-md); transform: translateY(-1px); }
+
+  /* ---- FOOTER ---- */
+  footer { background: #3A3028; color: var(--mocha-lt); padding: 72px 28px 28px; }
+  .footer-grid {
+    max-width: 1180px; margin: 0 auto 52px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 52px;
+  }
+  .footer-brand .logo-en { color: var(--taupe); font-size: 20px; }
+  .footer-brand .logo-sub { color: var(--mocha-lt); }
+  .footer-desc { margin-top: 18px; font-size: 14px; line-height: 2.1; color: rgba(168,155,142,0.65); font-weight: 300; }
+  .footer-social { display: flex; gap: 10px; margin-top: 22px; }
+  .social-btn {
+    width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12);
+    display: flex; align-items: center; justify-content: center; font-size: 15px; transition: var(--ease); color: var(--mocha-lt);
+  }
+  .social-btn:hover { border-color: var(--taupe); color: var(--taupe); }
+  .footer-col h4 { font-family: var(--fn-th); font-size: 14px; font-weight: 500; color: var(--taupe); margin-bottom: 20px; }
+  .footer-col li { margin-bottom: 12px; }
+  .footer-col li a { font-family: var(--fn-th); font-size: 13px; color: rgba(168,155,142,0.65); transition: var(--ease); font-weight: 300; }
+  .footer-col li a:hover { color: var(--taupe); }
+  .footer-bottom {
+    max-width: 1180px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-family: var(--fn-th); font-size: 12px; color: rgba(168,155,142,0.45);
+  }
+
+  /* ---- MOBILE NAV ---- */
+  .mobile-nav {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(247,243,238,0.97); border-top: 1px solid var(--border-lt);
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); z-index: 100;
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    -webkit-transform: translateZ(0); transform: translateZ(0);
+    box-shadow: 0 -4px 24px rgba(94,81,72,0.08);
+  }
+  .mob-nav-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .mob-nav-item {
+    display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 8px 4px;
+    font-family: var(--fn-th); font-size: 11px; color: var(--mocha-lt); transition: var(--ease);
+  }
+  .mob-nav-item.active, .mob-nav-item:hover { color: var(--mocha); }
+  .mob-nav-item span:first-child { font-size: 22px; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 1024px) {
+    .products-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .story-inner { grid-template-columns: 1fr; gap: 36px; }
+    .story-img-mock { max-height: 280px; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 72px 20px 56px; }
+    .hero h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+    .hero-arch { width: 260px; height: 200px; border-radius: 0 0 130px 130px; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .mobile-nav { display: block; }
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+    .hero-stats { gap: 20px; padding-top: 32px; margin-top: 40px; }
+    .age-filter, .categories, .products, .trust, .reviews { padding: 52px 16px; }
+    .story-band { padding: 52px 16px; }
+    .newsletter { padding: 64px 20px; }
+  }
+  @media (max-width: 480px) {
+    .hero-stats { gap: 18px; }
+    .hero-stats .stat { min-width: 80px; }
+    .age-grid { gap: 8px; }
+    .age-card { min-width: 80px; padding: 14px 10px; }
+    .age-label { font-size: 12px; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .products-grid { gap: 10px; }
+    .prod-info { padding: 12px; }
+    .nl-form { flex-direction: column; gap: 8px; }
+    .nl-form input { min-width: 100%; }
+    .nav-inner { padding: 0 16px; }
+    .logo-en { font-size: 19px; }
+  }
+
+  /* ---- SCROLL REVEAL ---- */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.vis { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- VERSION SWITCHER -->
+<div class="version-bar">
+  <span>เลือกดูเวอร์ชัน</span>
+  <a href="v1.html" class="v-btn">V1 — Quiet Luxury</a>
+  <a href="v2.html" class="v-btn active">V2 — Soft Boutique</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>🌿 ผ้าออร์แกนิค GOTS Certified</span>
+  <span class="topbar-dot"></span>
+  <span>🚚 จัดส่งฟรี เมื่อครบ ฿1,500</span>
+  <span class="topbar-dot"></span>
+  <span>↩ คืนสินค้าได้ 30 วัน</span>
+</div>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="v2.html" class="logo">
+      <!-- Moon + baby cloud illustration -->
+      <svg class="logo-illustration" width="44" height="44" viewBox="0 0 44 44" fill="none">
+        <!-- Cloud body -->
+        <ellipse cx="22" cy="30" rx="13" ry="7" fill="#EDE5DA" stroke="#D6C8B8" stroke-width="0.8"/>
+        <circle cx="17" cy="28" r="5" fill="#EDE5DA" stroke="#D6C8B8" stroke-width="0.8"/>
+        <circle cx="27" cy="28" r="5.5" fill="#EDE5DA" stroke="#D6C8B8" stroke-width="0.8"/>
+        <circle cx="22" cy="25" r="6.5" fill="#EDE5DA" stroke="#D6C8B8" stroke-width="0.8"/>
+        <!-- Crescent moon -->
+        <path d="M30 12C26.686 12 24 9.314 24 6C24 9.314 21.314 12 18 12C21.314 12 24 14.686 24 18C24 14.686 26.686 12 30 12Z" fill="none" stroke="#A89B8E" stroke-width="1" stroke-linejoin="round"/>
+        <path d="M32 8C30.343 8 29 6.657 29 5" stroke="#A89B8E" stroke-width="0.8" stroke-linecap="round"/>
+        <!-- Stars -->
+        <circle cx="16" cy="10" r="1" fill="#C8D0C4" opacity="0.7"/>
+        <circle cx="14" cy="16" r="0.7" fill="#C8D0C4" opacity="0.5"/>
+        <circle cx="33" cy="16" r="0.8" fill="#D6C8B8" opacity="0.6"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-en">Lamooné Kids</span>
+        <span class="logo-sub">baby &amp; family goods</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="v2.html" class="active">หน้าแรก</a>
+      <a href="#">สินค้า</a>
+      <a href="#">คอลเลคชั่น</a>
+      <a href="#">เกี่ยวกับเรา</a>
+      <a href="#">ติดต่อ</a>
+    </nav>
+    <div class="nav-right">
+      <button class="nav-cart">🛍 ตะกร้า <span class="cart-count">0</span></button>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-arch"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🌙 ใหม่! คอลเลคชั่น Moonlight 2024</div>
+    <h1><strong>เลือกสรร</strong>สิ่งที่ดีที่สุด<br>สำหรับลูกน้อย</h1>
+    <p class="hero-th">
+      เสื้อผ้าเด็กพรีเมียม ออร์แกนิค<br>
+      ดีไซน์เรียบหรู สไตล์เกาหลี-สแกนดิเนเวีย<br>
+      คัดสรรเฉพาะวัสดุปลอดภัยสำหรับทารก
+    </p>
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">ดูสินค้าทั้งหมด →</a>
+      <a href="#" class="btn-outline">เกี่ยวกับแบรนด์</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">500+</span><span class="stat-lbl">รายการสินค้า</span></div>
+      <div class="stat"><span class="stat-num">2,400+</span><span class="stat-lbl">ครอบครัวที่ไว้วางใจ</span></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">ออร์แกนิค</span></div>
+      <div class="stat"><span class="stat-num">4.9 ★</span><span class="stat-lbl">รีวิวจากลูกค้า</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGE FILTER -->
+<section class="age-filter">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:32px;">
+      <div class="sec-eyebrow">เลือกตามอายุ</div>
+      <h2>สินค้าสำหรับลูกน้อย</h2>
+    </div>
+    <div class="age-grid">
+      <div class="age-card active"><span class="age-emoji">👶</span><span class="age-label">แรกเกิด</span><span class="age-sub">0-3 เดือน</span></div>
+      <div class="age-card"><span class="age-emoji">🍼</span><span class="age-label">เล็กน้อย</span><span class="age-sub">3-6 เดือน</span></div>
+      <div class="age-card"><span class="age-emoji">🌱</span><span class="age-label">หัดคลาน</span><span class="age-sub">6-12 เดือน</span></div>
+      <div class="age-card"><span class="age-emoji">🌟</span><span class="age-label">หัดเดิน</span><span class="age-sub">1-2 ปี</span></div>
+      <div class="age-card"><span class="age-emoji">🦋</span><span class="age-label">วัยซน</span><span class="age-sub">2-3 ปี</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-eyebrow">หมวดหมู่</div>
+      <h2>สินค้าคัดสรรพิเศษ</h2>
+      <p>เสื้อผ้าและของใช้เด็ก จากวัสดุออร์แกนิคคุณภาพสูง</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal"><div class="cat-bg cat-c1"><span>👶</span></div><div class="cat-info"><div class="cat-name">บอดี้สูท & โรมเปอร์</div><div class="cat-count">48 รายการ</div></div></div>
+      <div class="cat-card reveal"><div class="cat-bg cat-c2"><span>🌙</span></div><div class="cat-info"><div class="cat-name">ชุดนอนออร์แกนิค</div><div class="cat-count">32 รายการ</div></div></div>
+      <div class="cat-card reveal"><div class="cat-bg cat-c3"><span>🎁</span></div><div class="cat-info"><div class="cat-name">ของขวัญพิเศษ</div><div class="cat-count">24 รายการ</div></div></div>
+      <div class="cat-card reveal"><div class="cat-bg cat-c4"><span>🧣</span></div><div class="cat-info"><div class="cat-name">หมวก & เครื่องประดับ</div><div class="cat-count">36 รายการ</div></div></div>
+      <div class="cat-card reveal"><div class="cat-bg cat-c5"><span>👗</span></div><div class="cat-info"><div class="cat-name">ชุดแม่ & ลูก</div><div class="cat-count">18 รายการ</div></div></div>
+      <div class="cat-card reveal"><div class="cat-bg cat-c6"><span>✨</span></div><div class="cat-info"><div class="cat-name">ชุดพิธีพิเศษ</div><div class="cat-count">22 รายการ</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="container">
+    <div class="prod-header">
+      <div>
+        <h2>New Arrivals</h2>
+        <p>สินค้ามาใหม่ล่าสุด</p>
+      </div>
+      <a href="#" class="view-all">ดูสินค้าทั้งหมด →</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F5EDE0,#EDD8C4);">🍼</div>
+          <span class="prod-tag t-new">ใหม่</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Organic Bodysuit</div>
+          <div class="prod-name-th">ชุดบอดี้สูท ผ้าออร์แกนิค</div>
+          <div class="prod-rating">★★★★★ <span>(24 รีวิว)</span></div>
+          <div class="prod-bottom"><span class="prod-price">฿590</span><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#E8EEE6,#C4D0C0);">🌿</div>
+          <span class="prod-tag t-org">ออร์แกนิค</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Sage Sleeper Set</div>
+          <div class="prod-name-th">ชุดนอน สีเซจ ออร์แกนิค</div>
+          <div class="prod-rating">★★★★★ <span>(18 รีวิว)</span></div>
+          <div class="prod-bottom"><div><span class="prod-old">฿990</span><span class="prod-price">฿790</span></div><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F5EAD8,#E5D4B4);">🎀</div>
+          <span class="prod-tag t-sale">ลด 15%</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Moon Gift Set</div>
+          <div class="prod-name-th">เซ็ตของขวัญ Moon</div>
+          <div class="prod-rating">★★★★★ <span>(42 รีวิว)</span></div>
+          <div class="prod-bottom"><div><span class="prod-old">฿1,750</span><span class="prod-price">฿1,490</span></div><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#EDE8E0,#D4CAC0);">👒</div>
+          <span class="prod-tag t-new">ใหม่</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Cream Knit Hat</div>
+          <div class="prod-name-th">หมวกถักสีครีม</div>
+          <div class="prod-rating">★★★★☆ <span>(11 รีวิว)</span></div>
+          <div class="prod-bottom"><span class="prod-price">฿290</span><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F0EDE8,#DED6CC);">🌸</div>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Linen Romper</div>
+          <div class="prod-name-th">ชุดโรมเปอร์ผ้าลินิน</div>
+          <div class="prod-rating">★★★★★ <span>(29 รีวิว)</span></div>
+          <div class="prod-bottom"><span class="prod-price">฿690</span><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#E8EDE6,#C2CCC0);">🍃</div>
+          <span class="prod-tag t-org">ออร์แกนิค</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Natural Swaddle</div>
+          <div class="prod-name-th">ผ้าห่อตัว Natural</div>
+          <div class="prod-rating">★★★★★ <span>(55 รีวิว)</span></div>
+          <div class="prod-bottom"><span class="prod-price">฿490</span><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F2ECD8,#E2D4B0);">⭐</div>
+          <span class="prod-tag t-new">ใหม่</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Star Print Set</div>
+          <div class="prod-name-th">เซ็ตลายดาว</div>
+          <div class="prod-rating">★★★★★ <span>(16 รีวิว)</span></div>
+          <div class="prod-bottom"><span class="prod-price">฿890</span><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#EDE0D4,#D4C4B4);">🌙</div>
+          <span class="prod-tag t-sale">ลด 20%</span>
+          <button class="prod-wish">🤍</button>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Moon Dress</div>
+          <div class="prod-name-th">ชุดเดรส Moon</div>
+          <div class="prod-rating">★★★★★ <span>(33 รีวิว)</span></div>
+          <div class="prod-bottom"><div><span class="prod-old">฿1,250</span><span class="prod-price">฿990</span></div><button class="prod-add">ใส่ตะกร้า</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="story-band">
+  <div class="container">
+    <div class="story-inner">
+      <div class="story-img-mock">🌙</div>
+      <div class="story-text">
+        <h2>เรื่องราวของ<br>Lamooné Kids</h2>
+        <p>เราเริ่มต้นจากความรักของคุณแม่คนหนึ่ง ที่ต้องการมอบสิ่งที่ดีที่สุดให้กับลูกน้อย ด้วยเสื้อผ้าที่อ่อนนุ่ม ปลอดภัย และสวยงาม</p>
+        <p>ทุกชิ้นในคอลเลคชั่น Lamooné คัดสรรจากผ้าออร์แกนิคเกรดพรีเมียม ผ่านมาตรฐาน GOTS และ OEKO-TEX รับรองความปลอดภัยสำหรับทารกแรกเกิด</p>
+        <a href="#">อ่านเรื่องราวของเรา →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-eyebrow">ความไว้วางใจ</div>
+      <h2>ทำไมต้องเลือก Lamooné</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item reveal"><span class="trust-icon">🌱</span><h3>GOTS Certified Organic</h3><p>ผ้าออร์แกนิค รับรองมาตรฐาน GOTS &amp; OEKO-TEX ปลอดภัยสำหรับทารก</p></div>
+      <div class="trust-item reveal"><span class="trust-icon">🛡️</span><h3>ปลอดภัยสำหรับทารก</h3><p>ไร้สารเคมี สีย้อมธรรมชาติ เหมาะสำหรับผิวบอบบาง</p></div>
+      <div class="trust-item reveal"><span class="trust-icon">🚚</span><h3>จัดส่งทั่วประเทศ</h3><p>รับสินค้าภายใน 1-3 วัน ห่อของขวัญสวยงาม บริการพิเศษ</p></div>
+      <div class="trust-item reveal"><span class="trust-icon">💝</span><h3>คืนสินค้าได้ 30 วัน</h3><p>ไม่พอใจ คืนได้เต็มจำนวน ไม่มีคำถาม</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-eyebrow">รีวิวจากลูกค้า</div>
+      <h2>เสียงจากคุณแม่</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"ผ้านุ่มมากค่ะ ลูกใส่แล้วไม่แพ้เลย ดีไซน์สวยมาก ดูหรูหราแต่ราคาสมเหตุสมผล"</p>
+        <div class="review-author"><div class="review-avatar">👩</div><div><div class="review-name">คุณแม่นุ่น</div><div class="review-date">กรุงเทพฯ · 2 สัปดาห์ที่แล้ว</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"ซื้อเป็นของขวัญวันเกิดให้หลาน แพคเกจสวยมากจนไม่อยากเปิด ตัวสินค้าออกแบบได้เรียบหรูมากเลย"</p>
+        <div class="review-author"><div class="review-avatar">👩‍💼</div><div><div class="review-name">คุณพี่แนน</div><div class="review-date">เชียงใหม่ · 1 เดือนที่แล้ว</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"ประทับใจมากค่ะ จัดส่งเร็ว ห่อสวย ผ้า organic จริง ลูกน้อยชอบมาก ขอบคุณ Lamooné นะคะ"</p>
+        <div class="review-author"><div class="review-avatar">🤱</div><div><div class="review-name">คุณแม่มิ้ว</div><div class="review-date">ภูเก็ต · 3 สัปดาห์ที่แล้ว</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="nl-deco"></div>
+  <div class="nl-deco-2"></div>
+  <div class="newsletter-content">
+    <div class="nl-badge">🌙 สมาชิก Lamooné</div>
+    <h2>รับส่วนลด 10% ทันที</h2>
+    <p>
+      สมัครรับข่าวสาร รับส่วนลดสำหรับการสั่งซื้อครั้งแรก<br>
+      พร้อมรับโปรโมชั่นพิเศษและคอลเลคชั่นใหม่ก่อนใคร
+    </p>
+    <div class="nl-form">
+      <input type="email" placeholder="กรอกอีเมลของคุณ">
+      <button>สมัครรับข่าวสาร →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="gap:12px;">
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none" style="opacity:0.7;">
+          <ellipse cx="22" cy="30" rx="13" ry="7" fill="#6B5B4E" stroke="#8C7A6E" stroke-width="0.8"/>
+          <circle cx="17" cy="28" r="5" fill="#6B5B4E" stroke="#8C7A6E" stroke-width="0.8"/>
+          <circle cx="27" cy="28" r="5.5" fill="#6B5B4E" stroke="#8C7A6E" stroke-width="0.8"/>
+          <circle cx="22" cy="25" r="6.5" fill="#6B5B4E" stroke="#8C7A6E" stroke-width="0.8"/>
+          <path d="M30 12C26.686 12 24 9.314 24 6C24 9.314 21.314 12 18 12C21.314 12 24 14.686 24 18C24 14.686 26.686 12 30 12Z" fill="none" stroke="#D6C8B8" stroke-width="1" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-en">Lamooné Kids</span>
+          <span class="logo-sub">baby &amp; family goods</span>
+        </div>
+      </div>
+      <p class="footer-desc">
+        คัดสรรเสื้อผ้าและของใช้สำหรับเด็ก<br>
+        จากแบรนด์พรีเมียม ออร์แกนิค<br>
+        สไตล์เกาหลี-สแกนดิเนเวีย<br>
+        ส่งตรงถึงบ้านคุณทั่วประเทศไทย
+      </p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">📱</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="#" class="social-btn">📸</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>สินค้า</h4>
+      <ul>
+        <li><a href="#">บอดี้สูท & โรมเปอร์</a></li>
+        <li><a href="#">ชุดนอน</a></li>
+        <li><a href="#">เสื้อผ้าแรกเกิด</a></li>
+        <li><a href="#">ของขวัญพิเศษ</a></li>
+        <li><a href="#">ชุดแม่ & ลูก</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ข้อมูล</h4>
+      <ul>
+        <li><a href="#">เกี่ยวกับเรา</a></li>
+        <li><a href="#">วิธีสั่งซื้อ</a></li>
+        <li><a href="#">นโยบายคืนสินค้า</a></li>
+        <li><a href="#">คำถามที่พบบ่อย</a></li>
+        <li><a href="#">บล็อก</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ติดต่อ</h4>
+      <ul>
+        <li><a href="#">LINE: @lamoone</a></li>
+        <li><a href="#">FB: Lamooné Kids</a></li>
+        <li><a href="#">IG: @lamoone.kids</a></li>
+        <li><a href="#">hello@lamoone.co.th</a></li>
+        <li><a href="#">Bangkok, Thailand</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Lamooné Kids. All rights reserved.</span>
+    <span>ออกแบบด้วยความรัก ♡ Bangkok</span>
+  </div>
+</footer>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav">
+  <div class="mob-nav-grid">
+    <a href="v2.html" class="mob-nav-item active"><span>🏠</span><span>หน้าแรก</span></a>
+    <a href="#" class="mob-nav-item"><span>🛍</span><span>สินค้า</span></a>
+    <a href="#" class="mob-nav-item"><span>❤️</span><span>รายการโปรด</span></a>
+    <a href="#" class="mob-nav-item"><span>👤</span><span>บัญชี</span></a>
+  </div>
+</nav>
+
+<script>
+// Age card toggle
+document.querySelectorAll('.age-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.age-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+  });
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

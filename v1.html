@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="LAMOONÉ KIDS — เสื้อผ้าเด็กพรีเมียม คัดสรรพิเศษ ออร์แกนิค สไตล์เกาหลี-สแกนดิเนเวีย">
+  <title>LAMOONÉ KIDS — Baby & Family Goods</title>
+  <!-- Theme color for mobile browsers & LINE -->
+  <meta name="theme-color" content="#F7F3EE">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- Open Graph for LINE / Facebook sharing -->
+  <meta property="og:title" content="LAMOONÉ KIDS — Baby & Family Goods">
+  <meta property="og:description" content="เสื้อผ้าเด็กพรีเมียม ออร์แกนิค สไตล์เกาหลี-สแกนดิเนเวีย คัดสรรเฉพาะวัสดุปลอดภัยสำหรับทารก">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="th_TH">
+  <meta property="og:site_name" content="LAMOONÉ KIDS">
+  <!-- LINE in-app browser -->
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-page-mode" content="app">
+  <meta name="browsermode" content="application">
+  <meta name="nightmode" content="disable">
+  <meta name="layoutmode" content="fitscreen">
+  <meta name="imagemode" content="force">
+  <meta name="screen-orientation" content="portrait">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+  /* =============================================
+     LAMOONÉ KIDS — V1: QUIET LUXURY
+     Inspiration: Seoul Seongsu-dong · Parisian minimal
+  ============================================= */
+  :root {
+    --cream:    #F7F3EE;
+    --cream-dk: #EFE8DF;
+    --beige:    #E9E1D6;
+    --taupe:    #D6C8B8;
+    --taupe-lt: #EDE5DA;
+    --mocha:    #5E5148;
+    --mocha-md: #8C7A6E;
+    --mocha-lt: #A89B8E;
+    --sage:     #C8D0C4;
+    --sage-lt:  #EBF0E9;
+    --white:    #FFFFFF;
+    --border:   #E2D8CE;
+    --border-lt:#EDE7DE;
+    --fn-en: 'Cormorant Garamond', Georgia, serif;
+    --fn-ui: 'Jost', sans-serif;
+    --fn-th: 'Anuphan', sans-serif;
+    --ease: all 0.3s ease;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--fn-th);
+    background: var(--cream);
+    color: var(--mocha);
+    line-height: 1.8;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: env(safe-area-inset-bottom);
+    font-weight: 300;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { text-decoration: none; color: inherit; transition: var(--ease); -webkit-tap-highlight-color: transparent; }
+  ul { list-style: none; }
+  button { cursor: pointer; font-family: inherit; border: none; outline: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- TOPBAR ---- */
+  .topbar {
+    background: var(--mocha);
+    color: var(--taupe-lt);
+    padding: 8px 24px;
+    text-align: center;
+    font-family: var(--fn-ui);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* ---- NAVBAR ---- */
+  .nav {
+    background: rgba(247,243,238,0.97);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-lt);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1180px; margin: 0 auto; padding: 0 24px;
+    height: 68px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon { color: var(--mocha); flex-shrink: 0; }
+  .logo-text { line-height: 1.25; }
+  .logo-en {
+    font-family: var(--fn-en); font-size: 18px; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase; color: var(--mocha); display: block;
+    white-space: nowrap;
+  }
+  .logo-sub {
+    font-family: var(--fn-ui); font-size: 8px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--mocha-lt); display: block; margin-top: 1px;
+    white-space: nowrap;
+  }
+  .nav-links { display: flex; align-items: center; gap: 0; }
+  .nav-links a {
+    padding: 6px 16px; font-family: var(--fn-ui); font-size: 10px;
+    font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mocha-lt);
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--mocha); }
+  .nav-right { display: flex; align-items: center; gap: 8px; }
+  .nav-cart {
+    display: flex; align-items: center; gap: 7px; padding: 8px 18px;
+    border: 1px solid var(--border); font-family: var(--fn-ui); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--mocha); background: transparent; transition: var(--ease);
+  }
+  .nav-cart:hover { background: var(--mocha); color: var(--cream); border-color: var(--mocha); }
+  .cart-count {
+    background: var(--mocha); color: var(--cream); width: 16px; height: 16px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px;
+  }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; padding: 8px; }
+  .hamburger span { width: 20px; height: 1px; background: var(--mocha); transition: var(--ease); }
+
+  /* ---- HERO ---- */
+  .hero {
+    padding: 120px 24px 100px; background: var(--cream); text-align: center;
+    position: relative; border-bottom: 1px solid var(--border-lt);
+  }
+  .hero::before {
+    content: ''; position: absolute; bottom: -1px; left: 20%; right: 20%;
+    height: 1px; background: linear-gradient(90deg, transparent, var(--taupe), transparent);
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--mocha-lt); margin-bottom: 44px;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; width: 36px; height: 1px; background: var(--taupe); display: block;
+  }
+  .hero h1 {
+    font-family: var(--fn-en); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 300;
+    line-height: 1.1; letter-spacing: 0.02em; color: var(--mocha); margin-bottom: 24px;
+    max-width: 760px; margin-left: auto; margin-right: auto;
+  }
+  .hero h1 em { font-style: italic; color: var(--mocha-md); }
+  .hero-th {
+    font-family: var(--fn-th); font-size: 15px; font-weight: 300; color: var(--mocha-md);
+    line-height: 2; max-width: 460px; margin: 0 auto 52px; letter-spacing: 0.02em;
+  }
+  .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--mocha); color: var(--cream); padding: 14px 40px;
+    font-family: var(--fn-ui); font-size: 9px; font-weight: 500; letter-spacing: 0.26em;
+    text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px;
+    transition: var(--ease); border: 1px solid var(--mocha);
+  }
+  .btn-primary:hover { background: var(--mocha-md); border-color: var(--mocha-md); }
+  .btn-ghost {
+    background: transparent; color: var(--mocha); padding: 14px 40px;
+    font-family: var(--fn-ui); font-size: 9px; font-weight: 500; letter-spacing: 0.26em;
+    text-transform: uppercase; border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 12px;
+    transition: var(--ease);
+  }
+  .btn-ghost:hover { border-color: var(--mocha); }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 60px; margin-top: 80px;
+    padding-top: 52px; border-top: 1px solid var(--border-lt); flex-wrap: wrap;
+  }
+  .stat-num {
+    font-family: var(--fn-en); font-size: 30px; font-weight: 300;
+    letter-spacing: 0.04em; display: block; color: var(--mocha);
+  }
+  .stat-lbl {
+    font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--mocha-lt); margin-top: 4px; display: block;
+  }
+
+  /* ---- SECTION HEAD ---- */
+  .sec-head { text-align: center; margin-bottom: 52px; }
+  .sec-eyebrow {
+    font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--mocha-lt); display: block; margin-bottom: 12px;
+  }
+  .sec-head h2 {
+    font-family: var(--fn-en); font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400; color: var(--mocha); letter-spacing: 0.06em;
+  }
+  .sec-head p {
+    font-family: var(--fn-th); font-size: 13px; color: var(--mocha-lt);
+    margin-top: 10px; letter-spacing: 0.02em; line-height: 2; font-weight: 300;
+  }
+
+  /* ---- CATEGORIES ---- */
+  .categories { padding: 90px 24px; background: var(--white); border-bottom: 1px solid var(--border-lt); }
+  .cat-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border-lt); border: 1px solid var(--border-lt);
+  }
+  .cat-item {
+    background: var(--cream); padding: 44px 20px; text-align: center;
+    cursor: pointer; transition: var(--ease); display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .cat-item:hover { background: var(--beige); }
+  .cat-icon-wrap {
+    width: 56px; height: 56px; border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; transition: var(--ease);
+  }
+  .cat-item:hover .cat-icon-wrap { border-color: var(--mocha); }
+  .cat-name { font-family: var(--fn-th); font-size: 14px; font-weight: 400; color: var(--mocha); }
+  .cat-count { font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mocha-lt); }
+
+  /* ---- PRODUCTS ---- */
+  .products { padding: 90px 24px; background: var(--cream-dk); }
+  .prod-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 1px; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px;
+  }
+  .prod-header h2 {
+    font-family: var(--fn-en); font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+    font-weight: 400; color: var(--mocha); letter-spacing: 0.05em;
+  }
+  .prod-header p { font-size: 12px; color: var(--mocha-lt); margin-top: 3px; font-family: var(--fn-th); }
+  .view-all {
+    font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--mocha-lt); display: flex; align-items: center; gap: 8px;
+  }
+  .view-all:hover { color: var(--mocha); }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border-lt); border: 1px solid var(--border-lt);
+  }
+  .product-card { background: var(--cream); overflow: hidden; transition: var(--ease); cursor: pointer; }
+  .product-card:hover { background: var(--white); }
+  .prod-img { aspect-ratio: 1; position: relative; overflow: hidden; }
+  .prod-img-bg {
+    width: 100%; height: 100%; display: flex; align-items: center;
+    justify-content: center; font-size: 48px; transition: transform 0.4s ease;
+  }
+  .product-card:hover .prod-img-bg { transform: scale(1.04); }
+  .prod-tag {
+    position: absolute; top: 12px; left: 12px; font-family: var(--fn-ui); font-size: 8px;
+    font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 4px 9px; background: var(--mocha); color: var(--cream);
+  }
+  .prod-tag.t-new { background: var(--sage); color: var(--mocha); }
+  .prod-tag.t-sale { background: var(--taupe); color: var(--mocha); }
+  .prod-info { padding: 18px 16px; }
+  .prod-name { font-family: var(--fn-en); font-size: 16px; font-weight: 400; color: var(--mocha); letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .prod-name-th { font-family: var(--fn-th); font-size: 12px; color: var(--mocha-lt); margin: 3px 0 14px; font-weight: 300; }
+  .prod-bottom { display: flex; align-items: center; justify-content: space-between; }
+  .prod-price { font-family: var(--fn-en); font-size: 19px; font-weight: 300; color: var(--mocha); }
+  .prod-old { font-size: 11px; color: var(--mocha-lt); text-decoration: line-through; display: block; line-height: 1; }
+  .prod-add {
+    background: transparent; border: 1px solid var(--border); padding: 7px 13px;
+    font-family: var(--fn-ui); font-size: 8px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--mocha); transition: var(--ease);
+  }
+  .prod-add:hover { background: var(--mocha); color: var(--cream); border-color: var(--mocha); }
+
+  /* ---- QUOTE BAND ---- */
+  .quote-band { background: var(--beige); padding: 90px 24px; border-top: 1px solid var(--border-lt); border-bottom: 1px solid var(--border-lt); }
+  .quote-inner { max-width: 660px; margin: 0 auto; text-align: center; }
+  .quote-inner svg { margin: 0 auto 28px; color: var(--taupe); display: block; }
+  .quote-inner blockquote {
+    font-family: var(--fn-en); font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+    font-weight: 300; font-style: italic; line-height: 1.75; color: var(--mocha); margin-bottom: 28px;
+  }
+  .quote-inner cite {
+    font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--mocha-lt); font-style: normal;
+  }
+
+  /* ---- TRUST ---- */
+  .trust { padding: 72px 24px; background: var(--white); border-bottom: 1px solid var(--border-lt); }
+  .trust-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border-lt); border: 1px solid var(--border-lt);
+    max-width: 960px; margin: 0 auto;
+  }
+  .trust-item { background: var(--cream); padding: 36px 20px; text-align: center; }
+  .trust-icon { font-size: 22px; margin-bottom: 16px; display: block; }
+  .trust-item h3 { font-family: var(--fn-en); font-size: 14px; font-weight: 400; letter-spacing: 0.04em; color: var(--mocha); margin-bottom: 8px; }
+  .trust-item p { font-family: var(--fn-th); font-size: 12px; color: var(--mocha-lt); line-height: 1.9; font-weight: 300; }
+
+  /* ---- NEWSLETTER ---- */
+  .newsletter { background: var(--mocha); padding: 90px 24px; text-align: center; position: relative; }
+  .newsletter::before {
+    content: ''; position: absolute; top: 0; left: 15%; right: 15%;
+    height: 1px; background: linear-gradient(90deg, transparent, var(--taupe), transparent);
+  }
+  .nl-eyebrow { font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--mocha-lt); display: block; margin-bottom: 18px; }
+  .newsletter h2 { font-family: var(--fn-en); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; letter-spacing: 0.06em; color: var(--taupe-lt); margin-bottom: 12px; }
+  .newsletter p { font-family: var(--fn-th); font-size: 13px; color: var(--mocha-lt); letter-spacing: 0.03em; margin-bottom: 44px; line-height: 2.2; font-weight: 300; }
+  .nl-form { display: flex; max-width: 440px; margin: 0 auto; }
+  .nl-form input {
+    flex: 1; padding: 14px 20px; background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14); border-right: none;
+    font-family: var(--fn-th); font-size: 13px; color: var(--cream); outline: none;
+  }
+  .nl-form input::placeholder { color: rgba(168,155,142,0.55); }
+  .nl-form button {
+    background: var(--taupe); color: var(--mocha); padding: 14px 26px;
+    font-family: var(--fn-ui); font-size: 9px; font-weight: 500; letter-spacing: 0.22em;
+    text-transform: uppercase; border: 1px solid var(--taupe); white-space: nowrap; transition: var(--ease);
+  }
+  .nl-form button:hover { background: var(--beige); border-color: var(--beige); }
+
+  /* ---- FOOTER ---- */
+  footer { background: #3A3028; color: var(--mocha-lt); padding: 72px 24px 28px; }
+  .footer-grid {
+    max-width: 1180px; margin: 0 auto 52px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 52px;
+  }
+  .footer-brand .logo-en { color: var(--taupe-lt); font-size: 15px; }
+  .footer-brand .logo-sub { color: var(--mocha-lt); }
+  .footer-desc { margin-top: 18px; font-size: 13px; line-height: 2; color: rgba(168,155,142,0.65); font-weight: 300; }
+  .footer-social { display: flex; gap: 8px; margin-top: 22px; }
+  .social-btn {
+    width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center; font-size: 14px; transition: var(--ease); color: var(--mocha-lt);
+  }
+  .social-btn:hover { border-color: var(--taupe); color: var(--taupe-lt); }
+  .footer-col h4 { font-family: var(--fn-ui); font-size: 9px; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--taupe-lt); margin-bottom: 22px; }
+  .footer-col li { margin-bottom: 11px; }
+  .footer-col li a { font-family: var(--fn-th); font-size: 13px; color: rgba(168,155,142,0.65); transition: var(--ease); font-weight: 300; }
+  .footer-col li a:hover { color: var(--taupe-lt); }
+  .footer-bottom {
+    max-width: 1180px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-family: var(--fn-ui); font-size: 10px; letter-spacing: 0.1em; color: rgba(168,155,142,0.45);
+  }
+
+  /* ---- MOBILE NAV ---- */
+  .mobile-nav {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--cream); border-top: 1px solid var(--border-lt);
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); z-index: 100;
+    -webkit-transform: translateZ(0); transform: translateZ(0);
+  }
+  .mob-nav-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .mob-nav-item {
+    display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 7px 4px;
+    font-family: var(--fn-ui); font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--mocha-lt); transition: var(--ease);
+  }
+  .mob-nav-item.active, .mob-nav-item:hover { color: var(--mocha); }
+  .mob-nav-item span:first-child { font-size: 20px; }
+
+  /* ---- VERSION SWITCH ---- */
+  .version-bar {
+    background: var(--sage-lt); border-bottom: 1px solid var(--border-lt);
+    padding: 10px 24px; display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  .version-bar span { font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mocha-lt); }
+  .v-btn {
+    padding: 6px 20px; font-family: var(--fn-ui); font-size: 9px; letter-spacing: 0.18em;
+    text-transform: uppercase; border: 1px solid var(--border); background: transparent; color: var(--mocha); transition: var(--ease);
+  }
+  .v-btn.active { background: var(--mocha); color: var(--cream); border-color: var(--mocha); }
+  .v-btn:hover:not(.active) { border-color: var(--mocha); }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 1024px) {
+    .products-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 72px 20px 56px; }
+    .hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .mobile-nav { display: block; }
+    body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+    .hero-stats { gap: 20px; padding-top: 32px; margin-top: 40px; }
+    .products { padding: 52px 16px; }
+    .categories { padding: 52px 16px; }
+    .trust { padding: 48px 16px; }
+    .newsletter { padding: 64px 20px; }
+    .quote-band { padding: 56px 20px; }
+  }
+  @media (max-width: 480px) {
+    .hero-stats { gap: 18px; flex-wrap: wrap; }
+    .hero-stats .stat { min-width: 80px; }
+    .nl-form { flex-direction: column; }
+    .nl-form input { border-right: 1px solid rgba(255,255,255,0.14); border-bottom: none; }
+    .trust-grid { grid-template-columns: 1fr; }
+    .products-grid { gap: 8px; }
+    .prod-info { padding: 12px; }
+    .prod-name { font-size: 14px; }
+    .nav-inner { padding: 0 16px; }
+    .logo-en { font-size: 15px; letter-spacing: 0.2em; }
+  }
+
+  /* ---- SCROLL REVEAL ---- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.vis { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- VERSION SWITCHER -->
+<div class="version-bar">
+  <span>เลือกดูเวอร์ชัน</span>
+  <a href="v1.html" class="v-btn active">V1 — Quiet Luxury</a>
+  <a href="v2.html" class="v-btn">V2 — Soft Boutique</a>
+</div>
+
+<!-- TOPBAR -->
+<div class="topbar">จัดส่งฟรี เมื่อสั่งซื้อครบ ฿1,500 · ส่งทั่วประเทศ 1-3 วัน</div>
+
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="v1.html" class="logo">
+      <svg class="logo-icon" width="24" height="28" viewBox="0 0 28 32" fill="none">
+        <path d="M14 3C8.477 3 4 7.477 4 13C4 18.523 8.477 23 14 23C16.6 23 18.95 22.05 20.75 20.45C19.05 20.9 17.2 20.4 15.7 19.25C13 17.1 12.25 13.5 13.85 10.7C14.5 9.5 15.45 8.45 16.6 7.75C15.7 7.1 14.85 6.65 14 6.45" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        <circle cx="21" cy="6" r="0.9" fill="currentColor" opacity="0.5"/>
+        <circle cx="24" cy="10" r="0.6" fill="currentColor" opacity="0.3"/>
+        <circle cx="19" cy="3" r="0.5" fill="currentColor" opacity="0.22"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-en">Lamooné Kids</span>
+        <span class="logo-sub">baby &amp; family goods</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="v1.html" class="active">หน้าแรก</a>
+      <a href="#">สินค้า</a>
+      <a href="#">คอลเลคชั่น</a>
+      <a href="#">เกี่ยวกับเรา</a>
+      <a href="#">ติดต่อ</a>
+    </nav>
+    <div class="nav-right">
+      <button class="nav-cart">🛍 ตะกร้า <span class="cart-count">0</span></button>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">New Collection 2024</div>
+  <h1>เลือกสรร<em>สิ่งที่ดีที่สุด</em><br>สำหรับลูกน้อย</h1>
+  <p class="hero-th">
+    คอลเลคชั่นเสื้อผ้าเด็กพรีเมียม ออร์แกนิค<br>
+    ดีไซน์เรียบหรู สไตล์เกาหลี-สแกนดิเนเวีย<br>
+    คัดสรรเฉพาะวัสดุปลอดภัยสำหรับทารก
+  </p>
+  <div class="hero-btns">
+    <a href="#" class="btn-primary">ดูสินค้าทั้งหมด →</a>
+    <a href="#" class="btn-ghost">เกี่ยวกับแบรนด์</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">500+</span><span class="stat-lbl">รายการสินค้า</span></div>
+    <div class="stat"><span class="stat-num">2,400+</span><span class="stat-lbl">ครอบครัวที่ไว้วางใจ</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">ออร์แกนิค</span></div>
+    <div class="stat"><span class="stat-num">4.9 ★</span><span class="stat-lbl">รีวิวจากลูกค้า</span></div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Shop by Category</span>
+      <h2>หมวดหมู่สินค้า</h2>
+      <p>เสื้อผ้าและของใช้เด็ก คัดสรรพิเศษจากแบรนด์คุณภาพ</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-item reveal"><div class="cat-icon-wrap">👶</div><span class="cat-name">บอดี้สูท & โรมเปอร์</span><span class="cat-count">48 รายการ</span></div>
+      <div class="cat-item reveal"><div class="cat-icon-wrap">🌙</div><span class="cat-name">ชุดนอน</span><span class="cat-count">32 รายการ</span></div>
+      <div class="cat-item reveal"><div class="cat-icon-wrap">🎁</div><span class="cat-name">ของขวัญพิเศษ</span><span class="cat-count">24 รายการ</span></div>
+      <div class="cat-item reveal"><div class="cat-icon-wrap">🧣</div><span class="cat-name">หมวก & เครื่องประดับ</span><span class="cat-count">36 รายการ</span></div>
+      <div class="cat-item reveal"><div class="cat-icon-wrap">👗</div><span class="cat-name">ชุดแม่ & ลูก</span><span class="cat-count">18 รายการ</span></div>
+      <div class="cat-item reveal"><div class="cat-icon-wrap">✨</div><span class="cat-name">ชุดพิเศษ</span><span class="cat-count">22 รายการ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="container">
+    <div class="prod-header">
+      <div>
+        <h2>New Arrivals</h2>
+        <p>สินค้ามาใหม่ล่าสุด</p>
+      </div>
+      <a href="#" class="view-all">ดูทั้งหมด →</a>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F0E8DC,#E2D5C4);">🍼</div>
+          <span class="prod-tag t-new">ใหม่</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Organic Bodysuit</div>
+          <div class="prod-name-th">ชุดบอดี้สูท ผ้าออร์แกนิค</div>
+          <div class="prod-bottom"><span class="prod-price">฿590</span><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#E8F0E8,#C4CFC4);">🌿</div>
+          <span class="prod-tag">ออร์แกนิค</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Sage Sleeper Set</div>
+          <div class="prod-name-th">ชุดนอน สีเซจ ออร์แกนิค</div>
+          <div class="prod-bottom"><div><span class="prod-old">฿990</span><span class="prod-price">฿790</span></div><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F5EAD8,#E5D4B4);">🎀</div>
+          <span class="prod-tag t-sale">ลด 15%</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Moon Gift Set</div>
+          <div class="prod-name-th">เซ็ตของขวัญ Moon</div>
+          <div class="prod-bottom"><div><span class="prod-old">฿1,750</span><span class="prod-price">฿1,490</span></div><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#EDE8E0,#D4CAC0);">👒</div>
+          <span class="prod-tag t-new">ใหม่</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Cream Knit Hat</div>
+          <div class="prod-name-th">หมวกถักสีครีม</div>
+          <div class="prod-bottom"><span class="prod-price">฿290</span><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F0EDE8,#DED6CC);">🌸</div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Linen Romper</div>
+          <div class="prod-name-th">ชุดโรมเปอร์ผ้าลินิน</div>
+          <div class="prod-bottom"><span class="prod-price">฿690</span><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#E8EDE8,#C2CCC2);">🍃</div>
+          <span class="prod-tag">ออร์แกนิค</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Natural Swaddle</div>
+          <div class="prod-name-th">ผ้าห่อตัว Natural</div>
+          <div class="prod-bottom"><span class="prod-price">฿490</span><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#F2ECD8,#E2D4B0);">⭐</div>
+          <span class="prod-tag t-new">ใหม่</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Star Print Set</div>
+          <div class="prod-name-th">เซ็ตลายดาว</div>
+          <div class="prod-bottom"><span class="prod-price">฿890</span><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="prod-img">
+          <div class="prod-img-bg" style="background:linear-gradient(135deg,#EDE0D4,#D4C4B4);">🌙</div>
+          <span class="prod-tag t-sale">ลด 20%</span>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Moon Dress</div>
+          <div class="prod-name-th">ชุดเดรส Moon</div>
+          <div class="prod-bottom"><div><span class="prod-old">฿1,250</span><span class="prod-price">฿990</span></div><button class="prod-add">+ ตะกร้า</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="quote-band">
+  <div class="quote-inner">
+    <svg width="40" height="28" viewBox="0 0 40 28" fill="none">
+      <path d="M0 28V16C0 9.333 3.333 4.333 10 1L12 4C8.667 5.667 6.667 8.333 6 12H12V28H0ZM22 28V16C22 9.333 25.333 4.333 32 1L34 4C30.667 5.667 28.667 8.333 28 12H34V28H22Z" fill="currentColor" opacity="0.2"/>
+    </svg>
+    <blockquote>
+      "เราเชื่อว่าเสื้อผ้าชิ้นแรกของลูกน้อย<br>
+      ควรสัมผัสได้ถึงความอบอุ่น ความปลอดภัย<br>
+      และความรักที่ไม่มีวันสิ้นสุด"
+    </blockquote>
+    <cite>— Lamooné Kids, Bangkok</cite>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-eyebrow">Our Promise</span>
+      <h2>ทำไมต้องเลือก Lamooné</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item reveal">
+        <span class="trust-icon">🌱</span>
+        <h3>GOTS Certified Organic</h3>
+        <p>ผ้าออร์แกนิค รับรองมาตรฐาน<br>GOTS &amp; OEKO-TEX</p>
+      </div>
+      <div class="trust-item reveal">
+        <span class="trust-icon">🛡</span>
+        <h3>Safe for Newborns</h3>
+        <p>ปลอดภัย ไร้สารเคมี<br>เหมาะสำหรับผิวทารกแรกเกิด</p>
+      </div>
+      <div class="trust-item reveal">
+        <span class="trust-icon">🚚</span>
+        <h3>Nationwide Delivery</h3>
+        <p>จัดส่งทั่วประเทศ ภายใน 1-3 วัน<br>ห่อของขวัญพิเศษได้</p>
+      </div>
+      <div class="trust-item reveal">
+        <span class="trust-icon">↩</span>
+        <h3>30-Day Returns</h3>
+        <p>คืนสินค้าได้ภายใน 30 วัน<br>ไม่มีคำถาม</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <span class="nl-eyebrow">Exclusive Offer</span>
+  <h2>รับส่วนลด 10%</h2>
+  <p>
+    สำหรับการสั่งซื้อครั้งแรก เมื่อสมัครรับข่าวสาร<br>
+    พร้อมรับโปรโมชั่นพิเศษและคอลเลคชั่นใหม่ก่อนใคร
+  </p>
+  <div class="nl-form">
+    <input type="email" placeholder="อีเมลของคุณ">
+    <button>สมัครรับข่าวสาร</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo" style="gap:10px;">
+        <svg width="20" height="24" viewBox="0 0 28 32" fill="none" style="color:#D6C8B8;">
+          <path d="M14 3C8.477 3 4 7.477 4 13C4 18.523 8.477 23 14 23C16.6 23 18.95 22.05 20.75 20.45C19.05 20.9 17.2 20.4 15.7 19.25C13 17.1 12.25 13.5 13.85 10.7C14.5 9.5 15.45 8.45 16.6 7.75C15.7 7.1 14.85 6.65 14 6.45" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          <circle cx="21" cy="6" r="0.9" fill="currentColor" opacity="0.5"/>
+          <circle cx="24" cy="10" r="0.6" fill="currentColor" opacity="0.3"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-en" style="font-size:15px;">Lamooné Kids</span>
+          <span class="logo-sub">baby &amp; family goods</span>
+        </div>
+      </div>
+      <p class="footer-desc">
+        คัดสรรเสื้อผ้าและของใช้สำหรับเด็ก<br>
+        จากแบรนด์พรีเมียม ออร์แกนิค<br>
+        สไตล์เกาหลี-สแกนดิเนเวีย<br>
+        ส่งตรงถึงบ้านคุณทั่วประเทศไทย
+      </p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">📱</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="#" class="social-btn">📸</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>สินค้า</h4>
+      <ul>
+        <li><a href="#">บอดี้สูท & โรมเปอร์</a></li>
+        <li><a href="#">ชุดนอน</a></li>
+        <li><a href="#">เสื้อผ้าแรกเกิด</a></li>
+        <li><a href="#">ของขวัญพิเศษ</a></li>
+        <li><a href="#">ชุดแม่ & ลูก</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ข้อมูล</h4>
+      <ul>
+        <li><a href="#">เกี่ยวกับเรา</a></li>
+        <li><a href="#">วิธีสั่งซื้อ</a></li>
+        <li><a href="#">นโยบายคืนสินค้า</a></li>
+        <li><a href="#">คำถามที่พบบ่อย</a></li>
+        <li><a href="#">บล็อก</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>ติดต่อ</h4>
+      <ul>
+        <li><a href="#">LINE: @lamoone</a></li>
+        <li><a href="#">FB: Lamooné Kids</a></li>
+        <li><a href="#">IG: @lamoone.kids</a></li>
+        <li><a href="#">hello@lamoone.co.th</a></li>
+        <li><a href="#">Bangkok, Thailand</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Lamooné Kids. All rights reserved.</span>
+    <span>ออกแบบด้วยความรัก ♡ Bangkok</span>
+  </div>
+</footer>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav">
+  <div class="mob-nav-grid">
+    <a href="v1.html" class="mob-nav-item active"><span>🏠</span><span>หน้าแรก</span></a>
+    <a href="#" class="mob-nav-item"><span>🛍</span><span>สินค้า</span></a>
+    <a href="#" class="mob-nav-item"><span>❤️</span><span>รายการโปรด</span></a>
+    <a href="#" class="mob-nav-item"><span>👤</span><span>บัญชี</span></a>
+  </div>
+</nav>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
