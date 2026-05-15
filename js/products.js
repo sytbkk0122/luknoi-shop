@@ -135,7 +135,7 @@ function productCardHTML(p) {
   <article class="product-card" itemscope itemtype="https://schema.org/Product">
     <a href="#" aria-label="${p.name}">
       <div class="product-img-wrap">
-        <img src="${p.img}" alt="${p.name} - ลูกน้อย Shop" loading="lazy" itemprop="image" />
+        <img src="${p.img}" alt="${p.name} - cozybaby" loading="lazy" itemprop="image" />
         <span class="${badgeClass}">${p.badge}</span>
         <button class="product-wishlist" aria-label="บันทึก ${p.name}" onclick="event.preventDefault();toggleWishlist(this)">🤍</button>
       </div>
@@ -180,7 +180,7 @@ function renderNewArrivals() {
 }
 
 // Cart state
-let cart = JSON.parse(localStorage.getItem('luknoi_cart') || '[]');
+let cart = JSON.parse(localStorage.getItem('cozybaby_cart') || '[]');
 
 function addToCart(id) {
   const product = PRODUCTS.find(p => p.id === id);
@@ -188,7 +188,7 @@ function addToCart(id) {
   const existing = cart.find(i => i.id === id);
   if (existing) existing.qty++;
   else cart.push({ id, qty: 1 });
-  localStorage.setItem('luknoi_cart', JSON.stringify(cart));
+  localStorage.setItem('cozybaby_cart', JSON.stringify(cart));
   updateCartCount();
   showAddedFeedback();
 }

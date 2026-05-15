@@ -1,30 +1,31 @@
 /* ===================================
-   ลูกน้อย Shop — Global Styles
+   cozybaby — Global Styles
+   Warm cream palette
    =================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
 
 :root {
-  --pink:       #F9A8C9;
-  --pink-dark:  #E879A0;
-  --pink-light: #FDE8F2;
-  --blue:       #93C5FD;
-  --blue-light: #EFF6FF;
-  --yellow:     #FCD34D;
-  --yellow-light: #FFFBEB;
-  --green:      #6EE7B7;
-  --bg:         #FFF9FB;
+  --pink:       #E8A87C;
+  --pink-dark:  #C4724A;
+  --pink-light: #FBF0E6;
+  --blue:       #A8C4B8;
+  --blue-light: #EEF5F2;
+  --yellow:     #E8C97A;
+  --yellow-light: #FAF3E0;
+  --green:      #8CAF88;
+  --bg:         #FAF7F2;
   --white:      #FFFFFF;
-  --text:       #374151;
-  --text-light: #6B7280;
-  --text-muted: #9CA3AF;
-  --border:     #F3E8EF;
+  --text:       #3D2B1F;
+  --text-light: #7D5A4F;
+  --text-muted: #A89080;
+  --border:     #EDE0CC;
   --radius:     16px;
   --radius-sm:  8px;
   --radius-lg:  24px;
-  --shadow:     0 4px 20px rgba(249, 168, 201, 0.2);
-  --shadow-md:  0 8px 32px rgba(249, 168, 201, 0.25);
-  --shadow-lg:  0 16px 48px rgba(249, 168, 201, 0.3);
+  --shadow:     0 4px 20px rgba(196, 114, 74, 0.15);
+  --shadow-md:  0 8px 32px rgba(196, 114, 74, 0.2);
+  --shadow-lg:  0 16px 48px rgba(196, 114, 74, 0.25);
   --transition: all 0.25s ease;
 }
 
@@ -170,7 +171,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(135deg, #FFF0F7 0%, #EFF6FF 50%, #FFFBEB 100%);
+  background: linear-gradient(135deg, #FAF3E8 0%, #F5ECD7 50%, #FAF7F2 100%);
   padding: 80px 20px;
   text-align: center;
   position: relative;
@@ -182,7 +183,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
   position: absolute;
   top: -80px; right: -80px;
   width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(249,168,201,0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(232,168,124,0.25) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -191,7 +192,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
   position: absolute;
   bottom: -60px; left: -60px;
   width: 250px; height: 250px;
-  background: radial-gradient(circle, rgba(147,197,253,0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(168,196,184,0.25) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -248,7 +249,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
   border-radius: 50px;
   font-size: 16px;
   font-weight: 700;
-  box-shadow: 0 4px 16px rgba(232,121,160,0.4);
+  box-shadow: 0 4px 16px rgba(196,114,74,0.35);
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
@@ -257,7 +258,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(232,121,160,0.5);
+  box-shadow: 0 8px 24px rgba(196,114,74,0.45);
 }
 
 .btn-secondary {
@@ -583,12 +584,12 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
 .category-card:hover .category-bg { transform: scale(1.05); }
 
-.cat-romper { background: linear-gradient(135deg, #FDE8F2, #FBCFE8); }
-.cat-top    { background: linear-gradient(135deg, #EFF6FF, #BFDBFE); }
-.cat-bottom { background: linear-gradient(135deg, #FFFBEB, #FDE68A); }
-.cat-sleep  { background: linear-gradient(135deg, #F0FDF4, #BBF7D0); }
-.cat-gift   { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
-.cat-acc    { background: linear-gradient(135deg, #F5F3FF, #DDD6FE); }
+.cat-romper { background: linear-gradient(135deg, #FBF0E6, #F5D9C0); }
+.cat-top    { background: linear-gradient(135deg, #EEF5F2, #C8DDD7); }
+.cat-bottom { background: linear-gradient(135deg, #FAF3E0, #EFE0B0); }
+.cat-sleep  { background: linear-gradient(135deg, #F2F7F0, #C8DBC4); }
+.cat-gift   { background: linear-gradient(135deg, #FAF0E0, #EDCF96); }
+.cat-acc    { background: linear-gradient(135deg, #F5F0ED, #E0D0C4); }
 
 .category-label {
   font-size: 14px;
@@ -702,7 +703,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 /* ===== NEWSLETTER ===== */
 .newsletter-section {
   padding: 60px 20px;
-  background: linear-gradient(135deg, var(--pink-dark), #C2185B);
+  background: linear-gradient(135deg, #C4724A, #9E5535);
   text-align: center;
   color: white;
 }
@@ -754,7 +755,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
 /* ===== FOOTER ===== */
 footer {
-  background: #1F1229;
+  background: #2C1A0E;
   color: #D1D5DB;
   padding: 60px 20px 24px;
 }
@@ -982,7 +983,7 @@ footer {
 
 /* ===== ABOUT PAGE ===== */
 .about-hero {
-  background: linear-gradient(135deg, #FFF0F7, #EFF6FF);
+  background: linear-gradient(135deg, #FAF3E8, #EEF5F2);
   padding: 80px 20px;
   text-align: center;
 }
