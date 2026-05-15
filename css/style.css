@@ -1,5 +1,5 @@
 /* ===================================
-   cozybaby — Global Styles
+   cozybabie — Global Styles
    Warm cream palette
    =================================== */
 
@@ -31,7 +31,13 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  /* LINE / WeChat: prevent font scaling */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 
 body {
   font-family: 'Sarabun', 'Nunito', sans-serif;
@@ -39,12 +45,30 @@ body {
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
+  /* Smooth touch scroll on iOS / WeChat */
+  -webkit-overflow-scrolling: touch;
+  /* Safe area for notched phones (iPhone X+) */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 img { max-width: 100%; height: auto; display: block; }
-a { text-decoration: none; color: inherit; transition: var(--transition); }
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  /* Remove blue flash on tap in LINE/WeChat */
+  -webkit-tap-highlight-color: transparent;
+}
 ul { list-style: none; }
-button { cursor: pointer; font-family: inherit; border: none; outline: none; }
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  /* Prevent double-tap zoom on buttons */
+  touch-action: manipulation;
+}
 
 .container {
   max-width: 1200px;
@@ -54,12 +78,17 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
 /* ===== NAVBAR ===== */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  /* Fallback for WeChat which may not support backdrop-filter */
+  background: rgba(255, 255, 255, 0.97);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
+  /* -webkit-sticky required for iOS Safari / LINE browser */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 100;
+  /* Ensure navbar sits above WeChat toolbar */
+  z-index: 999;
   padding: 0 20px;
 }
 
@@ -1158,8 +1187,12 @@ footer {
   bottom: 0; left: 0; right: 0;
   background: white;
   border-top: 1px solid var(--border);
-  padding: 8px 0;
-  z-index: 200;
+  /* Safe area for iPhone X+ notch & LINE/WeChat bottom bar */
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  z-index: 999;
+  /* WeChat: ensure above in-app browser toolbar */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .mobile-nav-grid {
@@ -1198,7 +1231,7 @@ footer {
   .contact-layout { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .mobile-nav { display: block; }
-  body { padding-bottom: 70px; }
+  body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
 }
 
 @media (max-width: 480px) {
